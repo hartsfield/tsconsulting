@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+.spacer {
+        /* padding-left: 1em; */
+        /* width: 51.3ch; */
+        width: calc(100% - 2em);
+        margin: 1em;
+}
+
+.logo {
+    font-family: 'Old Standard TT', serif;
+    font-size: xxx-large;
+    padding-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.sublogo {
+        font-family: 'Old Standard TT', serif;
+        text-align-last:justify;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
+        font-weight: bold;
+        color: #7ca714;
+}
+
+.summary {
+        font-family: 'Old Standard TT', serif;
+        padding-top: 1em;
+        text-align: justify;
+}
+
+.summary > ul {
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-bottom: 1em;
+}
+
+.summary > ul > li {
+        font-family: 'Old Standard TT', serif;
+        font-style: italic;
+        text-align: left;
+}
+
+.ossHead {
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+}
+
+.summaryHead {
+        padding-bottom: 0.5em;
+}
+
+.chartItemA {
+    background-color: #7ca714;
+    color: white;
+    padding: 0.3em;
+    margin-top: 0.5em;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 0.2em;
+    border: 1px solid #245318;
+    width: fit-content;
+}
+
+p {
+        font-family: 'Old Standard TT', serif;
+}
+
+/* .contact { */
+/*     margin-top: 1em; */
+/*     font-size: 1.2em; */
+/*     padding-left: 1.6em; */
+/*     max-width: 55ch; */
+/*     padding-left: 1.6em; */
+/*     padding-right: 1.6em; */
+/* } */
+
+.emailInput {
+        width: 100%;
+        border-right: 1px solid #d9cb43;
+        border-left: 1px solid #d9cb43;
+        border-top: 1px solid #d9cb43;
+        border-top-left-radius: 0.3em;
+        border-top-right-radius: 0.3em;
+        border-bottom: none;
+        padding: 0.5em;
+        font-family: monospace;
+        font-size: 1em;
+}
+
+.messageArea {
+        padding: 0.5em;
+        width: 100%;
+        border: 1px solid #d9cb43;
+        border-bottom-left-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+        height: 8em;
+        font-size: 1em;
+}
+
+.sendButt {
+    background: #b25212;
+    text-align: center;
+    padding: 0.5em;
+    color: #edc1ac;
+    margin-top: 1em;
+    border-radius: 0.2em;
+    font-family: sans-serif;
+    border: 1px solid #762020;
+    cursor: pointer;
+}
+
+
+@media screen and (orientation:landscape)  {
+        .spacer {
+                max-width: 51.3ch;
+        }
+        .sublogo {
+        }
+
+        .summary {
+        }
+
+}
+
+.footer {
+        border-bottom: 0.5em solid black;
+        width: 100%;
+        text-align: center;
+        color: #7ca714;
+}
+
+.footer > div {
+        display: inline-flex;
+}
