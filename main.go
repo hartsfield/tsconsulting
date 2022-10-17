@@ -14,6 +14,12 @@ type page struct {
 	Body  string
 }
 
+type contactData struct {
+	Email   string `json:"email"`
+	Phone   string `json:"phoneNumber"`
+	Message string `json:"message"`
+}
+
 var (
 	templates = template.Must(template.New("main").ParseGlob("internal/*/*.tmpl"))
 )
@@ -23,12 +29,13 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", home)
+	mux.HandleFunc("/api/sendMail", sendMail)
 	mux.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 
 	// Server configuration
 	srv := &http.Server{
 		// in production only ust SSL
-		Addr:              ":8080",
+		Addr:              ":9047",
 		Handler:           mux,
 		ReadHeaderTimeout: 5 * time.Second,
 		WriteTimeout:      10 * time.Second,

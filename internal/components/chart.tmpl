@@ -1,7 +1,14 @@
 {{define "chart"}}
-  <div class="chartItemA">Pre-consultation</div>
-  <div class="chartItemA">Full-consultation</div>
-  <div class="chartItemA">Product Planning & design</div>
-  <div class="chartItemA">Product Development & Deployment</div>
-  <div class="chartItemA">Product Management</div>
+        <div class="chartItemA">Pre-consultation<div class="price">$0.00</div></div>
+  <div class="chartItemA">Full-consultation<div class="price">$300.00</div></div>
+  <div class="chartItemA">Product Planning & design<div class="price">$250.00 - $5000.00</div></div>
+  <div class="chartItemA">Product Development & Deployment<div class="price">$250.00 - ?</div></div>
+  <div class="chartItemA">Product Management<div class="price">$TBD</div></div>
+  <script type="text/javascript">
+        items = document.getElementsByClassName("chartItemA");
+        spacerWidth = document.getElementById("spacer").offsetWidth/2
+        for (i=0; i < items.length; i++) {
+           items[i].style.marginLeft = (spacerWidth - (items[i].offsetWidth/2));
+        }
+  </script>
 {{end}}

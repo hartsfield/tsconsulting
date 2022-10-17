@@ -1,5 +1,5 @@
 {{ define "logo" }}
-        <div class="spacer">
+        <div class="spacer" id="spacer">
                 <div class="logo">TSConsulting</div>
                 <hr>
                 <div class="sublogo">SanFrancisco ☯ Seattle ☯  NewYork ☯  Miami </div>
@@ -24,20 +24,25 @@
                            <li>Security assessments</li>
                            <li>Product marketing services</li>
                    </ul>
+                        <p>
                    Does your business need an advanced website or data analysis 
                    tools? Are you trying to develop a new product but need help
                    designing the software? Does your business need to integrate 
                    data from multiple sources? Could you increase your profits 
                    if you automated certain tasks or if you had a bot that 
                    alerted you and your company when certain data changed? 
+                        </p>
 
+                        <p>
                    TSConsulting can help your company design and build products 
                    that can streamline your process and increase your 
                    businesses profits.
+                        </p>
                 </div>
                 <div class="workExperience">
                         <h3 class="ossHead">Process</h3> 
                         {{ template "chart" }}
+                        <p></p>
                 </div>
                 <!-- <div class="workExperience"> -->
                 <!--         <h3 class="ossHead">Proof</h3> --> 
@@ -46,17 +51,28 @@
                 <div class="workExperience">
                         <h3 class="ossHead">Datalytics</h3> 
                         <p>
-                          Datalytics is the process of analyzing data. 
-                          TSConsulting can help your company create tools that
-                          pull data from digital sources, analyze it, and 
-                          perform operations on it. This type of tooling can be
-                          used to keep track of statistics that can change how 
-                          your company oerforms and generate more profits. 
+                          Datalytics is the process of analyzing and 
+                          transforming data. TSConsulting can help your company 
+                          create tools that pull data from digital sources, 
+                          analyze it, and perform operations on it. This type 
+                          of tooling can be used to keep track of statistics 
+                          that can change how your company performs and help 
+                          you create  more profits. We can help you implement 
+                          algorithms for trading stocks or crypto, bots to 
+                          track data on the web, and anything else you can 
+                          think of.
+                        </p>
+
+                        <p>
+                          Contact us today for a free consultation and see if
+                          TSConsulting is the right fit for you.
                         </p>
                 </div>
                 <div class="workExperience">
                         <h3 class="ossHead">Contact</h3> 
                         {{template "contact"}}
                 </div>
+
+    {{template "footer"}}
         </div>
 {{ end }}

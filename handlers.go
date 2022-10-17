@@ -11,3 +11,8 @@ func home(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(err)
 	}
 }
+
+func sendMail(w http.ResponseWriter, r *http.Request) {
+	cd, _ := marshalContactData(r)
+	fmt.Println(cd)
+}

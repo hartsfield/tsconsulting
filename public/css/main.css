@@ -56,8 +56,8 @@
 }
 
 .chartItemA {
-    background-color: #7ca714;
-    color: white;
+    background-color: #899f53;
+    color: #e0f0d6;
     padding: 0.3em;
     margin-top: 0.5em;
     font-weight: bold;
@@ -65,10 +65,21 @@
     border-radius: 0.2em;
     border: 1px solid #245318;
     width: fit-content;
+    padding-right: 0;
+}
+
+.price {
+    display: inline;
+    margin-left: 2em;
+    padding: 0.3em;
+    background: #b25212;
+    color: #ffedf3; 
 }
 
 p {
         font-family: 'Old Standard TT', serif;
+        text-align: justify;
+        padding-bottom: 0.4em;
 }
 
 /* .contact { */
@@ -113,12 +124,17 @@ p {
     font-family: sans-serif;
     border: 1px solid #762020;
     cursor: pointer;
+    margin-bottom: 3em;
 }
 
+.leftFootHead {
+        color: black;
+}
 
 @media screen and (orientation:landscape)  {
         .spacer {
-                max-width: 51.3ch;
+                max-width: 40%;
+                margin-left: 30%;
         }
         .sublogo {
         }
@@ -137,4 +153,16 @@ p {
 
 .footer > div {
         display: inline-flex;
+}
+
+.leftFoot {
+        float: left;
+}
+
+.rightFoot {
+        float: right;
+}
+
+.middleFoot {
+        font-size: 5em;
 }
