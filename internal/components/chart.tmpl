@@ -1,15 +1,41 @@
 {{define "chart"}}
   <div class="chartItemA" id="chartItemA">
-          Pre-consultation
+          <div class="headA">Pre-consultation</div>
           <div class="price">$0.00</div>
           <div class="itemDescription">
                   Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.</div>
+          see if it's a right fit for out company.
+          </div>
   </div>
-  <div class="chartItemA">Full-consultation<div class="price">$300.00</div></div>
-  <div class="chartItemA">Product Planning & design<div class="price">$250.00 - $5000.00</div></div>
-  <div class="chartItemA">Product Development & Deployment<div class="price">$250.00 - ?</div></div>
-  <div class="chartItemA">Product Management<div class="price">$TBD</div></div>
+  <div class="chartItemA">
+          <div class="headA">Full-consultation</div>
+          <div class="price">$300.00</div>
+          <div class="itemDescription">
+                  Our pre-consultation involves a discussion of your product to
+          see if it's a right fit for out company.
+          </div>
+  </div>
+  <div class="chartItemA"><div class="headA">Product Planning & design</div>
+          <div class="price">$250.00 - $5000.00</div>
+          <div class="itemDescription">
+                  Our pre-consultation involves a discussion of your product to
+          see if it's a right fit for out company.
+          </div>
+  </div>
+  <div class="chartItemA"><div class="headA">Product Development & Deployment</div>
+          <div class="price">$250.00 - ?</div>
+          <div class="itemDescription">
+                  Our pre-consultation involves a discussion of your product to
+          see if it's a right fit for out company.
+          </div>
+  </div>
+  <div class="chartItemA"><div class="headA">Product Management</div>
+          <div class="price">$TBD</div>
+          <div class="itemDescription">
+                  Our pre-consultation involves a discussion of your product to
+          see if it's a right fit for out company.
+          </div>
+  </div>
   <script type="text/javascript">
         items = document.getElementsByClassName("chartItemA");
         spacerWidth = document.getElementById("spacer").offsetWidth/2
@@ -38,18 +64,22 @@
         }
 
         window.addEventListener('scroll', function (event) {
-            elms = document.getElementsByClassName("chartItemA")
+            elms = document.getElementsByClassName("itemDescription")
             for (let elm of elms) {
                     if (isInViewPort(elm)) {
                         for (i=0;i<=10;i++) {
                          // update the element display
-                         elm.style.height = i + "em";
+                         // elm.style.height = i + "em";
+                         elm.style.fontSize = i/10 + "em";
+                         elm.parentElement.style.marginLeft = 0;
                         }
                     } else {
                         for (i=10;i>=1;i--) {
-                          elm.style.height = i + "em";
+                         // elm.style.height = i + "em";
+                         elm.style.fontSize = i/10 + "em";
                           if (i == 1) {
-                            elm.style.height = "unset";
+                            elm.style.fontSize = 0;
+                            elm.parentElement.style.marginLeft = spacerWidth - (elm.parentElement.offsetWidth/2);
                           }
                         }
                     }
