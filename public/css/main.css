@@ -56,14 +56,16 @@
 }
 
 .chartItemA {
-    background-color: #899f53;
-    color: #e0f0d6;
+    /* background-color: #899f53; */
+    /* color: #e0f0d6; */
+    background-color: #b4df4c;
+    color: #000000;
     padding: 0.3em;
     margin-top: 0.5em;
     font-weight: bold;
     text-transform: capitalize;
     border-radius: 0.2em;
-    border: 1px solid #245318;
+    /* border: 1px solid #245318; */
     width: fit-content;
     padding-right: 0;
 }
@@ -74,6 +76,8 @@
     padding: 0.3em;
     background: #b25212;
     color: #ffedf3; 
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
 }
 
 p {
@@ -82,14 +86,9 @@ p {
         padding-bottom: 0.4em;
 }
 
-/* .contact { */
-/*     margin-top: 1em; */
-/*     font-size: 1.2em; */
-/*     padding-left: 1.6em; */
-/*     max-width: 55ch; */
-/*     padding-left: 1.6em; */
-/*     padding-right: 1.6em; */
-/* } */
+.contact {
+        margin-bottom: 2em;
+}
 
 .emailInput {
         width: 100%;
@@ -118,17 +117,25 @@ p {
     background: #b25212;
     text-align: center;
     padding: 0.5em;
-    color: #edc1ac;
+    color: #ffefe8;
     margin-top: 1em;
     border-radius: 0.2em;
     font-family: sans-serif;
     border: 1px solid #762020;
     cursor: pointer;
     margin-bottom: 3em;
+    font-weight: bold;
 }
 
-.leftFootHead {
+.sendButt:hover {
+    background: #df7026;
+}
+
+.leftFootHead, .rightFootHead {
         color: black;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-decoration: underline;
 }
 
 @media screen and (orientation:landscape)  {
@@ -147,22 +154,70 @@ p {
 .footer {
         border-bottom: 0.5em solid black;
         width: 100%;
-        text-align: center;
+        /* text-align: center; */
         color: #7ca714;
 }
 
 .footer > div {
-        display: inline-flex;
+        /* display: inline-flex; */
 }
 
 .leftFoot {
         float: left;
+        /* width: 30ch; */
+}
+
+.leftFoot > ul, .rightFoot > ul {
+        display: block;
+}
+
+.leftFoot > ul > li, .rightFoot > ul > li {
+        display: block;
+        list-style-type: none;
+        color: #7ca714;
+        text-decoration: underline;
+        font-size: 0.74em;
 }
 
 .rightFoot {
+        text-align: right;
         float: right;
+        /* min-width: 30ch; */
+        /* display: inline; */
 }
 
 .middleFoot {
         font-size: 5em;
+        text-align: center;
+}
+
+.underfoot {
+        border-bottom: 0.5em solid #859728;
+        padding-top: 1em;
+}
+
+.phone {
+        border: 1px solid #d9cb43;
+        padding: 0.5em;
+        border-radius: 0.4em;
+        margin-bottom: 1em;
+        text-align: center;
+        background-color: #ececec;
+}
+
+/* .phoneIcon { */
+/*         border: 0.5em solid #7ca714; */
+/*         padding: 0.5em; */
+/*         margin: 0.5em; */
+/*         border-radius: 0.4em; */
+/*         display: inline; */
+/* } */
+
+.phoneText {
+        display: inline;
+        color:  #7ca714;
+}
+
+.phone:hover {
+        background-color: #feffee;
 }
