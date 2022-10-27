@@ -60,7 +60,7 @@
     color: #000000;
     margin-top: 0.5em;
     font-weight: bold;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     border-radius: 0.2em;
     width: fit-content;
     padding-right: 0;
@@ -231,4 +231,5 @@ p {
     padding: 0.5em;
     font-weight: 100;
     font-family: 'Old Standard TT', serif;
+    text-transform: unset;
 }

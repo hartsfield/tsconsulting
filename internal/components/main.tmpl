@@ -1,4 +1,15 @@
-{{ define "main" }}
-        <div class="title">{{ .Title }}</div>
-        <div class="body">{{ .Body }}</div>
-{{ end }}
+<html>
+        {{template "head"}}
+<body>
+        <div class="spacer" id="spacer">
+                {{template "logo"}}
+                {{template "purpose"}}
+                {{template "chart"}}
+                {{template "data"}}
+                {{template "security"}}
+                {{template "phone"}}
+                {{template "contact"}}
+                {{template "footer"}}
+        </div>
+</body>
+</html>

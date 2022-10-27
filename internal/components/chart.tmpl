@@ -1,41 +1,69 @@
 {{define "chart"}}
+  <h3 class="summaryHead">Process</h3> 
   <div class="chartItemA" id="chartItemA">
           <div class="headA">Pre-consultation</div>
           <div class="price">$0.00</div>
           <div class="itemDescription">
-                  Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.
+                  Our pre-consultation is a short FREE consultation, where we 
+                  can get a basic idea of your project and decide what 
+                  direction we're able to take it in. If it sounds like 
+                  something we can work with, we can move to the next step of 
+                  the process and discuss your project in-depth.
           </div>
   </div>
   <div class="chartItemA">
           <div class="headA">Full-consultation</div>
           <div class="price">$300.00</div>
           <div class="itemDescription">
-                  Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.
+                  During our full consultation, we'll ask in-depth questions 
+                  about your project, including technical and design questions,
+                  and we'll discuss the different methods for developing your
+                  project. When you leave this consultation, you'll have 
+                  deep knowledge on multiple ways to implement your project, 
+                  and you can then choose to let us create a full development 
+                  plan for your project, or take your idea to another firm.
           </div>
   </div>
   <div class="chartItemA"><div class="headA">Product Planning & design</div>
           <div class="price">$250.00 - $5000.00</div>
           <div class="itemDescription">
-                  Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.
+                  Product planning & design is the process of planning and 
+                  designing your project. This could be done in days, weeks, or
+                  months, and during this time, we'll stay in close contact or 
+                  work directly with you and/or your company, to find out all 
+                  the details needed to complete your project. At the end, 
+                  you'll be presented with a professional copy of a technical 
+                  manual that we can then use to create your project, or you 
+                  can choose take this manual to another firm, or hire 
+                  your own team of programmers, and perhaps negotiate a cheaper 
+                  rate.
           </div>
   </div>
   <div class="chartItemA"><div class="headA">Product Development & Deployment</div>
           <div class="price">$250.00 - ?</div>
           <div class="itemDescription">
-                  Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.
+                  During this phase, TSConsulting will develop your project, 
+                  and deploy it on whatever infrastucture we previously 
+                  discussed. Some projects are only a few lines of code, while 
+                  others could amount to hundreds of thousands or more. 
+                  A price will be determined based on the technical complexity 
+                  of your project. At the end of this phase, you will own a 
+                  complete and production-ready version of your project, 
+                  deployed on your chosen infrastructure.
           </div>
   </div>
   <div class="chartItemA"><div class="headA">Product Management</div>
           <div class="price">$TBD</div>
           <div class="itemDescription">
-                  Our pre-consultation involves a discussion of your product to
-          see if it's a right fit for out company.
+                  Sometimes your product will need updates or tending to, 
+                  search engine optimizations or marketing, and any number of 
+                  other administrative tasks.
+
+                  TSConsulting can help you every step of the way. Call today 
+                  and find out how we can increase your profits.
           </div>
   </div>
+  <p></p>
   <script type="text/javascript">
         items = document.getElementsByClassName("chartItemA");
         spacerWidth = document.getElementById("spacer").offsetWidth/2
@@ -50,7 +78,7 @@
             // Checking part. Here the code checks if it's *fully* visible
             // Edit this part if you just want a partial visibility
             if (
-                bounding.top <= window.innerHeight/2 &&
+                bounding.top <= (window.innerHeight/3)*2 &&
                 bounding.left >= 0 &&
                 bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
                 bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)

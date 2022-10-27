@@ -6,7 +6,7 @@ import (
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
-	err := templates.ExecuteTemplate(w, "home.tmpl", &page{Title: "Title", Body: "Hello world"})
+	err := templates.ExecuteTemplate(w, "main.tmpl", &page{})
 	if err != nil {
 		fmt.Println(err)
 	}
