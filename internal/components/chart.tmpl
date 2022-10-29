@@ -24,7 +24,8 @@
                   plan for your project, or take your idea to another firm.
           </div>
   </div>
-  <div class="chartItemA"><div class="headA">Product Planning & design</div>
+  <div class="chartItemA">
+          <div class="headA">Product Planning & design</div>
           <div class="price">$250.00 - $5000.00</div>
           <div class="itemDescription">
                   Product planning & design is the process of planning and 
@@ -39,7 +40,8 @@
                   rate.
           </div>
   </div>
-  <div class="chartItemA"><div class="headA">Product Development & Deployment</div>
+  <div class="chartItemA">
+          <div class="headA">Product Development & Deployment</div>
           <div class="price">$250.00 - ?</div>
           <div class="itemDescription">
                   During this phase, TSConsulting will develop your project, 
@@ -52,7 +54,8 @@
                   deployed on your chosen infrastructure.
           </div>
   </div>
-  <div class="chartItemA"><div class="headA">Product Management</div>
+  <div class="chartItemA">
+          <div class="headA">Product Management</div>
           <div class="price">$TBD</div>
           <div class="itemDescription">
                   Sometimes your product will need updates or tending to, 
@@ -83,35 +86,27 @@
                 bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
                 bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
             ) {
-                console.log('In the viewport! :)');
                 return true;
             } else {
-                console.log('Not in the viewport. :(');
                 return false;
             }
         }
 
-        window.addEventListener('scroll', function (event) {
-            elms = document.getElementsByClassName("itemDescription")
-            for (let elm of elms) {
-                    if (isInViewPort(elm)) {
-                        for (i=0;i<=10;i++) {
-                         // update the element display
-                         // elm.style.height = i + "em";
-                         elm.style.fontSize = i/10 + "em";
-                         elm.parentElement.style.marginLeft = 0;
-                        }
-                    } else {
-                        for (i=10;i>=1;i--) {
-                         // elm.style.height = i + "em";
-                         elm.style.fontSize = i/10 + "em";
-                          if (i == 1) {
-                            elm.style.fontSize = 0;
-                            elm.parentElement.style.marginLeft = spacerWidth - (elm.parentElement.offsetWidth/2);
-                          }
-                        }
+        elms = document.getElementsByClassName("itemDescription")
+        for (let elm of elms) {
+          elm.style.fontSize = 0;
+          window.addEventListener('scroll', function (event) {
+            if (isInViewPort(elm)) {
+                            expandText(elm, (window.innerHeight - elm.getBoundingClientRect().top)/(window.innerHeight/2))
+            }
+          }, false);
+        }
+
+        function expandText(elm, d) {
+                    if (parseFloat(elm.style.fontSize) < 0.95) {
+                      elm.style.fontSize = d + "em";
                     }
-                    }
-        }, false);
+                    elm.parentElement.style.marginLeft = 0;
+        }
   </script>
 {{end}}

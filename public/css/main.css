@@ -228,8 +228,22 @@ p {
 .itemDescription {
     font-size: 0;
     background: #fffccc;
+    /* background: #8d9e30; */
+    /* color: white; */
     padding: 0.5em;
     font-weight: 100;
     font-family: 'Old Standard TT', serif;
     text-transform: unset;
 }
+
+a {
+        color: #7ca714;
+}
+
+.leaf {
+        width: 7em;
+        position: absolute;
+        right: 2em;
+        z-index: -22131;
+}
+
