@@ -7,7 +7,8 @@ function sendMail() {
     if (xhr.status === 200) {
       var res = JSON.parse(xhr.responseText);
       if (res.success == "true") {
-        // document.getElementById("userinfo").innerHTML = "Hello, " + res.username       
+        document.getElementById("sendButt").innerHTML = "SENT";
+        document.getElementById("sendButt").style.background = "#7ca714";
       } else {
         // document.getElementById("userinfo").innerHTML = ""
       }
@@ -20,5 +21,3 @@ function sendMail() {
         message: document.getElementById("messageArea").value,
   }));
 }
-
-
