@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/hartsfield/gmailer"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
@@ -13,6 +15,15 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 
 func sendMail(w http.ResponseWriter, r *http.Request) {
-	cd, _ := marshalContactData(r)
-	fmt.Println(cd)
+	fmt.Println("sendmail")
+	m, _ := marshalContactData(r)
+	msg := gmailer.Message{
+		Recipient: "johnathanhartsfield@gmail.com",
+		Subject:   "ALERT! NEW JOB REQUEST!",
+		Body:      m.Email + "::" + m.Phone + "::" + m.Message,
+	}
+	msg.Send()
+	ajaxResponse(w, map[string]string{
+		"success": "true",
+	})
 }
