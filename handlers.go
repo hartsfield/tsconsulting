@@ -22,8 +22,12 @@ func sendMail(w http.ResponseWriter, r *http.Request) {
 		Subject:   "ALERT! NEW JOB REQUEST!",
 		Body:      m.Email + "::" + m.Phone + "::" + m.Message,
 	}
-	msg.Send()
+	msg.Send(onMessageSent)
 	ajaxResponse(w, map[string]string{
 		"success": "true",
 	})
+}
+
+func onMessageSent() {
+	fmt.Println("sent mail")
 }
