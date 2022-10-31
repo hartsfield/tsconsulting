@@ -7,10 +7,11 @@ function sendMail() {
     if (xhr.status === 200) {
       var res = JSON.parse(xhr.responseText);
       if (res.success == "true") {
-        document.getElementById("sendButt").innerHTML = "SENT";
+        document.getElementById("sendButt").innerHTML = "Sent";
         document.getElementById("sendButt").style.background = "#7ca714";
       } else {
-        // document.getElementById("userinfo").innerHTML = ""
+        document.getElementById("sendButt").innerHTML = "Error";
+        document.getElementById("sendButt").style.background = "red";
       }
     }
   };
