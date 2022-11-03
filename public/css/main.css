@@ -247,3 +247,10 @@ a {
         z-index: -22131;
 }
 
+#errorDiv {
+        color: red;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 0.3em;
+}
+

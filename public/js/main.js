@@ -1,6 +1,11 @@
 function sendMail() {
-  var xhr = new XMLHttpRequest();
+        if (document.getElementById("emailInput").value == '' && document.getElementById("phoneNumber").value == '') {
+               document.getElementById("errorDiv").innerHTML = "Please provide a phone number or email" 
+       } else {
 
+  var xhr = new XMLHttpRequest();
+        document.getElementById("sendButt").innerHTML = "Sending";
+        document.getElementById("sendButt").style.background = "yellow";
   xhr.open('POST', '/api/sendMail');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
@@ -21,4 +26,5 @@ function sendMail() {
         phoneNumber: document.getElementById("phoneNumber").value,
         message: document.getElementById("messageArea").value,
   }));
+       }
 }
